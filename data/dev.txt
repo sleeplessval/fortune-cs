@@ -1,0 +1,12 @@
+So everything is just a pile of barely working code added\non top of previously written barely working code. It keeps\ngrowing in size and complexity, diminishing any chance for\na change.\n\nTo have a healthy ecosystem you need to go back and revisit.\nYou need to occasionally throw stuff away and replace it with\nbetter stuff.\n\n	- Nikita Tonsky, 2018-09-17\n	  blog post on tonsky.me\n	  ("Software Disenchantment")
+There's nothing more permanent than a temporary solution.
+Unix is mature OS, windows is still in diapers and they smell badly\n\n	- Rafael Skodlar <raffi@linwin.com>
+Hello Jeffrey,\n\nUnfortunately due to company policy, we are unable to offer\npositions to people with the name Jeffrey since it will not work\nwith our database schema\n\n	- @yephph, 2020-04-12 on Twitter
+He's making a table\nSorting it twice\nHe's gonna `SELECT NAMES FROM CHILDREN WHERE BEHAVIOR = 'nice';`\nSanta Claus just learned SQL
+I don't know why, but first C programs tend to look a lot worse\nthan first programs in any other language (maybe except for fortran,\nbut then I suspect all fortran programs look like 'firsts')\n\n	- Olaf Kirch
+I'd crawl over an acre of 'Visual This++' and 'Integrated\nDevelopment That' to get to gcc, Emacs, and gdb. Thank you.\n\n	- Vance Petree, Virginia Power
+Electron is just Flash for the desktop.
+With a GUI, that "undo" button is always an option. But in real\nlife, you can't *unmake* a mistake. Sure, you can *recover*\nfrom a mistake, but you are always going to have to do some\nscrambling, my friend, and if you are at least halfway\nintelligent, you will definitely think twice about trying that\nagain, or at least trying it *that way* again. You don't want\nto jump through all those hoops again, so you think about your\nend goal and try to develop a better workflow for next time.\n\nThe command line, in short, makes you think. It makes you plan,\nit makes you think about the end goal, it makes you remember\npast failures. The command line makes you think about *outcomes*.\n\n	- Kenneth John Odle, the codex
+How do I type "for i in *.dvi do xdvi $i done" in a GUI?\n\n	- Discussion in comp.os.linux.misc
+"If the code and the comments disagree, then both are probably wrong."\n\n	- Norm Schryer
+Your karma check for today:\nThere once was a user that whined\nHis existing OS was so blind\nHe'd do better to pirate\nAn OS that ran great\nBut found that his hardware declined.\nPlease don't steal Mac OS\nReally, that's way uncool.\n(C) Apple Computer, Inc.
