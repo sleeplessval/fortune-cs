@@ -2,7 +2,10 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 
-var resourcePath = "/usr/share/fortune-cs/";
+//	get resource path from var or default
+string resourcePath = Environment.GetEnvironmentVariable("FORTUNE_CS_DIR");
+if(resourcePath == "" || !Directory.Exists(resourcePath))
+	resourcePath = "/usr/share/fortune-cs/";
 
 //	pull file arg if 1 argument is provided
 string file = null;
