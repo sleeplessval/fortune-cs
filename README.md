@@ -11,6 +11,17 @@ A no-nonsense, user-extensible `fortune-mod` replacement.
 This project was originally built in Rust, and I migrated it to C# primarily to
 test out [bflat](https://github.com/bflattened/bflat).
 
+<details>
+<summary><h2>Methodology</h2></summary>
+
+`fortune-cs` starts by selecting a category file, then a line, so the user will
+see a normal representation of each file. Then, it selects a line from the file.
+
+The fortune files themselves can be extended just by appending;
+`cat b.txt >> a.txt` is a perfectly valid way of merging two files.
+
+</details>
+
 ## Installation
 
 ### Application
