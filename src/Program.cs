@@ -2,14 +2,31 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 
-//	use merge function if given multiple arguments
-if(args.Length > 0) {
+var resourcePath = "/usr/share/fortune-cs/";
+
+//	pull file arg if 1 argument is provided
+string file = null;
+if(args.Length == 1) {
+	file = args[0];
+	//	if the file doens't exist, see if it's in `resourcePath`
+	if(!File.Exists(file)) {
+		if(!file.EndsWith(".txt"))
+			file = file + ".txt";
+		file = resourcePath + file;
+		if(!File.Exists(file)) {
+			//	don't try to read a file that doesn't exist
+			Console.WriteLine($"fortune-cs: no file '{file}' found.");
+			return 2;
+		}
+	}
+}
+//	run merge if more than 1 argument is provided
+else if(args.Length > 0) {
 	Utilities.Merge(args);
 	return 0;
 }
 
 //	make sure fortune directory exists
-var resourcePath = "/usr/share/fortune-cs/";
 if(!Directory.Exists(resourcePath)) {
 	Console.WriteLine("fortune-cs: directory '/usr/share/fortune-cs/' does not exist");
 	return 1;
@@ -18,15 +35,17 @@ if(!Directory.Exists(resourcePath)) {
 //	pull file list
 var files = Directory.GetFiles(resourcePath, "*.txt");
 
-//	choose a file and line
-var file = files[RandomNumberGenerator.GetInt32(files.Length)];
+//	choose file if no arg provided
+if(file == null)
+	file = files[RandomNumberGenerator.GetInt32(files.Length)];
+//	read the file and choose a line
 var lines = File.ReadAllLines(file);
 var line = lines[RandomNumberGenerator.GetInt32(lines.Length)];
 
-//	process escape codes
+//	process line breaks
 line = line.Replace("\\n", "\n");
 
-//	write
+//	write the fortune
 Console.WriteLine(line);
 
 return 0;
