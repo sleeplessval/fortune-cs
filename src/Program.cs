@@ -2,6 +2,12 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 
+//	use merge function if given multiple arguments
+if(args.Length > 0) {
+	Utilities.Merge(args);
+	return 0;
+}
+
 //	make sure fortune directory exists
 var resourcePath = "/usr/share/fortune-cs/";
 if(!Directory.Exists(resourcePath)) {
@@ -12,14 +18,10 @@ if(!Directory.Exists(resourcePath)) {
 //	pull file list
 var files = Directory.GetFiles(resourcePath, "*.txt");
 
-var prng = RandomNumberGenerator.Create();
-
 //	choose a file and line
 var file = files[RandomNumberGenerator.GetInt32(files.Length)];
 var lines = File.ReadAllLines(file);
 var line = lines[RandomNumberGenerator.GetInt32(lines.Length)];
-
-prng.Dispose();
 
 //	process escape codes
 line = line.Replace("\\n", "\n");
