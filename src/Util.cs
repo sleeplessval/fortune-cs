@@ -4,6 +4,18 @@ using System.IO;
 
 public static class Utilities {
 
+
+	///	<summary>
+	///		Checks if a given flag is set in `args`.
+	///	</summary>
+	public static bool HasFlags(string[] args, params string[] flags) {
+		foreach(string flag in flags)
+			//	using `Array.IndexOf` since including Linq for `array.Contains` increases binary size
+			if(Array.IndexOf(args, flag) != -1)
+				return true;
+		return false;
+	}
+
 	public static void Merge(params string[] files) {
 		//	hashset to prevent duplicates
 		var members = new HashSet<string>();
