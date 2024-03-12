@@ -13,7 +13,7 @@ public static class Usage {
 		Console.WriteLine(@"Valerie Wolfe <sleeplessval@gmail.com>
 Shows quotes from a set of files.
 
-usage: fortune-cs [files...]");
+usage: fortune-cs");
 	}
 
 	public static void ListText(string[] files) {
