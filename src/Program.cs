@@ -14,14 +14,38 @@ if(Utilities.HasFlags(args, "-v", "--version")) {
 	return 0;
 }
 
+//	collect nonflag args for merge or file selection
+var arguments = Utilities.CollectArgs(args);
+
 //	handle merge flag
 if(Utilities.HasFlags(args, "-m", "--merge")) {
-	Utilities.Merge(args);
+	Utilities.Merge(arguments);
 	return 0;
 }
 
+//	get resource path from var or default
+string resourcePath = Environment.GetEnvironmentVariable("FORTUNE_CS_DIR");
+if(resourcePath == "" || !Directory.Exists(resourcePath))
+	resourcePath = Globals.DEFAULT_PATH;
+
+//	pull file arg if provided
+string file = null;
+if(arguments.Count == 1) {
+	file = arguments[0];
+	//	if the file doens't exist, see if it's in `resourcePath`
+	if(!File.Exists(file)) {
+		if(!file.EndsWith(".txt"))
+			file = file + ".txt";
+		file = resourcePath + file;
+		if(!File.Exists(file)) {
+			//	don't try to read a file that doesn't exist
+			Console.WriteLine($"fortune-cs: no file '{file}' found.");
+			return 2;
+		}
+	}
+}
+
 //	make sure fortune directory exists
-var resourcePath = Globals.DEFAULT_PATH;
 if(!Directory.Exists(resourcePath)) {
 	Console.WriteLine($"fortune-cs: directory '${resourcePath}' does not exist");
 	return 1;
@@ -36,15 +60,17 @@ if(Utilities.HasFlags(args, "-l", "--list")) {
 	return 0;
 }
 
-//	choose a file and line
-var file = files[RandomNumberGenerator.GetInt32(files.Length)];
+//	choose file if not provided
+if(file == null)
+	file = files[RandomNumberGenerator.GetInt32(files.Length)];
+//	read the file and choose a line
 var lines = File.ReadAllLines(file);
 var line = lines[RandomNumberGenerator.GetInt32(lines.Length)];
 
-//	process escape codes
+//	process line breaks
 line = line.Replace("\\n", "\n");
 
-//	write
+//	write the fortune
 Console.WriteLine(line);
 
 return 0;

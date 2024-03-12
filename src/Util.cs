@@ -27,10 +27,9 @@ public static class Utilities {
 	}
 
 	///	<summary>
-	///		outputs all unique lines from all files in `args` to stdout
+	///		outputs all unique lines from all files in `files` to stdout
 	///	</summary>
-	public static void Merge(string[] args) {
-		var files = CollectArgs(args);
+	public static void Merge(List<string> files) {
 		//	hashset to prevent duplicates
 		var members = new HashSet<string>();
 		//	iterate over all paths given
