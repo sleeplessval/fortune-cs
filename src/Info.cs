@@ -13,7 +13,16 @@ public static class Usage {
 		Console.WriteLine(@"Valerie Wolfe <sleeplessval@gmail.com>
 Shows quotes from a set of files.
 
-usage: fortune-cs");
+usage: fortune-cs [flags] [source]
+
+args:
+   [file]                 Manual file selection
+
+flags:
+   -h, --help             Shows this help text
+   -v, --version          Shows version information
+   -l, --list             List files in the fortune directory
+   -m, --merge [files...] Output all distinct lines from a set of files");
 	}
 
 	public static void ListText(string[] files) {

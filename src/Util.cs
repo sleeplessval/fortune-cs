@@ -4,9 +4,19 @@ using System.IO;
 
 public static class Utilities {
 
+	///	<summary>
+	///		returns a `List` of all non-flag arguments
+	///	</summary>
+	public static List<string> CollectArgs(string[] args) {
+		var output = new List<string>();
+		foreach(string arg in args)
+			if(!arg.StartsWith("-"))
+				output.Add(arg);
+		return output;
+	}
 
 	///	<summary>
-	///		Checks if a given flag is set in `args`.
+	///		checks if a given flag is set in `args`
 	///	</summary>
 	public static bool HasFlags(string[] args, params string[] flags) {
 		foreach(string flag in flags)
@@ -16,7 +26,11 @@ public static class Utilities {
 		return false;
 	}
 
-	public static void Merge(params string[] files) {
+	///	<summary>
+	///		outputs all unique lines from all files in `args` to stdout
+	///	</summary>
+	public static void Merge(string[] args) {
+		var files = CollectArgs(args);
 		//	hashset to prevent duplicates
 		var members = new HashSet<string>();
 		//	iterate over all paths given
