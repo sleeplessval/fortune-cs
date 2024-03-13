@@ -1,9 +1,9 @@
 .........    Escape the 'Gates' of Hell\n  `:::'                  .......  ......\n   :::  *                  `::.    ::'\n   ::: .::  .:.::.  .:: .::  `::. :'\n   :::  ::   ::  ::  ::  ::    :::.\n   ::: .::. .::  ::.  `::::. .:'  ::.\n...:::.....................::'   .::::..\n	-- William E. Roadcap
 Win95 is not a virus; a virus does something.
-In most countries selling harmful things like drugs is punishable.\nThen how come people can sell Microsoft software and go unpunished?\n\n	- Hasse Skrifvars <hasku@rost.abo.fi>
+In most countries selling harmful things like drugs is\npunishable. Then how come people can sell Microsoft software\nand go unpunished?\n\n	- Hasse Skrifvars <hasku@rost.abo.fi>
 Once upon a time there was a DOS user who saw Unix, and saw that\nit was good. After typing cp on his DOS machine at home, he\ndownloaded GNU's unix tools ported to DOS and installed them.\nHe rm'd, cp'd, and mv'd happily for many days, and upon finding\nelvis, he vi'd and was happy. After a long day at work (on a Unix\nbox) he came home, started editing a file, and couldn't figure\nout why he couldn't suspend vi (w/ ctrl-z) to do a compile.\n\n	- Erik Troan <ewt@tipper.oit.unc.edu>
 When you say "I wrote a program that crashed Windows," people\njust stare at you blankly and say "Hey, I got those with the\nsystem, *for free*."\n\n	- Linus Torvalds
-By golly, I'm beginning to think Linux really *is* the best thing\nsince sliced bread.\n\n	- Vance Petree, Virginia Power
+By golly, I'm beginning to think Linux really *is* the best\nthing since sliced bread.\n\n	- Vance Petree, Virginia Power
 /*\n * [...] Note that 120 sec is defined in the protocol as the\n * maximum possible RTT. I guess we'll have to use something\n * other than TCP to talk to the University of Mars.\n * PAWS allows us longer timeouts and large windows, so once\n * implemented ftp to mars will work nicely\n */\n\n	- /usr/src/linux/net/inet/tcp.c\n	  concerning round trip times
 MSDOS didn't get as bad as it is overnight--it took over ten\nyears of careful development\n\n	- <dmeggins@aix1.uottawa.ca>
 "No manual is ever necessary."\nMay I politely interject here: BULLSHIT. That's the biggest\nApple lie of all!\n\n	- Discussion in comp.os.linux.misc
