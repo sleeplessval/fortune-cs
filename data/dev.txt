@@ -1,7 +1,7 @@
 So everything is just a pile of barely working code added on top\nof previously written barely working code. It keeps growing in\nsize and complexity, diminishing any chance for a change.\n\nTo have a healthy ecosystem you need to go back and revisit. You\nneed to occasionally throw stuff away and replace it with better\nstuff.\n\n	- Nikita Tonsky, 2018-09-17\n	  blog post on tonsky.me\n	  ("Software Disenchantment")
 There's nothing more permanent than a temporary solution.
 Unix is mature OS, windows is still in diapers and they smell badly\n\n	- Rafael Skodlar <raffi@linwin.com>
-Hello Jeffrey,\n\nUnfortunately due to company policy, we are unable to offer\npositions to people with the name Jeffrey since it will not work\nwith our database schema\n\n	- @yephph, 2020-04-12 on Twitter
+Hello Jeffrey,\n\nUnfortunately due to company policy, we are unable to offer\npositions to people with the name Jeffrey since it will not work\nwith our database schema\n\n	- @yephph@twitter.com, 2020-04-12
 He's making a table\nSorting it twice\nHe's gonna `SELECT NAMES FROM CHILDREN WHERE BEHAVIOR = 'nice';`\nSanta Claus just learned SQL
 I don't know why, but first C programs tend to look a lot worse\nthan first programs in any other language (maybe except for fortran,\nbut then I suspect all fortran programs look like 'firsts')\n\n	- Olaf Kirch
 I'd crawl over an acre of 'Visual This++' and 'Integrated\nDevelopment That' to get to gcc, Emacs, and gdb. Thank you.\n\n	- Vance Petree, Virginia Power
@@ -10,3 +10,4 @@ With a GUI, that "undo" button is always an option. But in real\nlife, you can't
 How do I type "for i in *.dvi do xdvi $i done" in a GUI?\n\n	- Discussion in comp.os.linux.misc
 "If the code and the comments disagree, then both are probably wrong."\n\n	- Norm Schryer
 Your karma check for today:\nThere once was a user that whined\nHis existing OS was so blind\nHe'd do better to pirate\nAn OS that ran great\nBut found that his hardware declined.\nPlease don't steal Mac OS\nReally, that's way uncool.\n(C) Apple Computer, Inc.
+In 10 years we went from "Rust will never replace C and C++" to\n"New C/C++ should not be written anymore, and you should use\nRust." Good job.\n\n	- dpc_pw on lobste.rs
